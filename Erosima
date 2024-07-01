@@ -1,0 +1,124 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Mainstring.lua"))()
+
+-- Script Configuration
+local scriptName = "Shindo Life 2 Cheats"
+local scriptLogo = "https://i.imgur.com/YourLogoHere.png" -- Replace with your logo URL
+local scriptColor = Color3.fromRGB(255, 0, 0) -- Red color for the menu
+
+-- Create the GUI
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local AutoQuest = Instance.new("TextButton")
+local AutoKillNPCs = Instance.new("TextButton")
+local AutoBossQuest = Instance.new("TextButton")
+local NoCooldown = Instance.new("TextButton")
+local CloseButton = Instance.new("TextButton")
+
+-- Properties
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 2
+Frame.Position = UDim2.new(0.3, 0, 0.3, 0)
+Frame.Size = UDim2.new(0, 200, 0, 250)
+
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0, 0, 0, 10)
+Title.Size = UDim2.new(1, 0, 0, 20)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = scriptName
+Title.TextColor3 = scriptColor
+Title.TextSize = 18.000
+
+AutoQuest.Parent = Frame
+AutoQuest.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+AutoQuest.Position = UDim2.new(0.1, 0, 0.2, 0)
+AutoQuest.Size = UDim2.new(0.8, 0, 0.1, 0)
+AutoQuest.Font = Enum.Font.SourceSans
+AutoQuest.Text = "Auto Quest"
+AutoQuest.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoQuest.TextSize = 14.000
+
+AutoKillNPCs.Parent = Frame
+AutoKillNPCs.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+AutoKillNPCs.Position = UDim2.new(0.1, 0, 0.35, 0)
+AutoKillNPCs.Size = UDim2.new(0.8, 0, 0.1, 0)
+AutoKillNPCs.Font = Enum.Font.SourceSans
+AutoKillNPCs.Text = "Auto Kill NPCs"
+AutoKillNPCs.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoKillNPCs.TextSize = 14.000
+
+AutoBossQuest.Parent = Frame
+AutoBossQuest.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+AutoBossQuest.Position = UDim2.new(0.1, 0, 0.5, 0)
+AutoBossQuest.Size = UDim2.new(0.8, 0, 0.1, 0)
+AutoBossQuest.Font = Enum.Font.SourceSans
+AutoBossQuest.Text = "Auto Boss Quest"
+AutoBossQuest.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoBossQuest.TextSize = 14.000
+
+NoCooldown.Parent = Frame
+NoCooldown.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+NoCooldown.Position = UDim2.new(0.1, 0, 0.65, 0)
+NoCooldown.Size = UDim2.new(0.8, 0, 0.1, 0)
+NoCooldown.Font = Enum.Font.SourceSans
+NoCooldown.Text = "No Cooldown"
+NoCooldown.TextColor3 = Color3.fromRGB(255, 255, 255)
+NoCooldown.TextSize = 14.000
+
+CloseButton.Parent = Frame
+CloseButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+CloseButton.Position = UDim2.new(0.1, 0, 0.8, 0)
+CloseButton.Size = UDim2.new(0.8, 0, 0.1, 0)
+CloseButton.Font = Enum.Font.SourceSans
+CloseButton.Text = "Close"
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextSize = 14.000
+
+-- Script Functions
+local function autoQuest()
+    -- Code to auto complete quests
+    print("Auto Quest activated")
+end
+
+local function autoKillNPCs()
+    -- Code to auto kill NPCs
+    print("Auto Kill NPCs activated")
+end
+
+local function autoBossQuest()
+    -- Code to auto complete boss quests
+    print("Auto Boss Quest activated")
+end
+
+local function noCooldown()
+    -- Code to remove cooldowns
+    print("No Cooldown activated")
+end
+
+-- Button Click Events
+AutoQuest.MouseButton1Click:Connect(autoQuest)
+AutoKillNPCs.MouseButton1Click:Connect(autoKillNPCs)
+AutoBossQuest.MouseButton1Click:Connect(autoBossQuest)
+NoCooldown.MouseButton1Click:Connect(noCooldown)
+CloseButton.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+
+-- Logo
+local logo = Instance.new("ImageLabel")
+logo.Parent = Frame
+logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+logo.BackgroundTransparency = 1.000
+logo.Position = UDim2.new(0.4, 0, 0, 0)
+logo.Size = UDim2.new(0, 20, 0, 20)
+logo.Image = scriptLogo
+
+-- Script Loaded
+print(scriptName .. " loaded successfully")
